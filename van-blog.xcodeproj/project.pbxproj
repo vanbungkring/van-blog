@@ -14,6 +14,7 @@
 		0CD472361AA2C87800446ABC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CD472351AA2C87800446ABC /* Images.xcassets */; };
 		0CD472391AA2C87800446ABC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD472371AA2C87800446ABC /* LaunchScreen.xib */; };
 		0CD472451AA2C87900446ABC /* van_blogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD472441AA2C87900446ABC /* van_blogTests.m */; };
+		EC519A8092511C66ACA0DB77 /* libPods-van-blog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F73DF83D31BED5CC165061 /* libPods-van-blog.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		0CD4723E1AA2C87900446ABC /* van-blogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "van-blogTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD472431AA2C87900446ABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CD472441AA2C87900446ABC /* van_blogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = van_blogTests.m; sourceTree = "<group>"; };
+		6F97DA9CF78EFCBCB7870002 /* Pods-van-blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-van-blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-van-blog/Pods-van-blog.release.xcconfig"; sourceTree = "<group>"; };
+		A1F73DF83D31BED5CC165061 /* libPods-van-blog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-van-blog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4084B16BEA2EED6BB7595E /* Pods-van-blog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-van-blog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-van-blog/Pods-van-blog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC519A8092511C66ACA0DB77 /* libPods-van-blog.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				0CD472271AA2C87800446ABC /* van-blog */,
 				0CD472411AA2C87900446ABC /* van-blogTests */,
 				0CD472261AA2C87800446ABC /* Products */,
+				4CC523E4518BE8AFAA839A80 /* Pods */,
+				241D161B6A575DC054A55C72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +88,10 @@
 		0CD472271AA2C87800446ABC /* van-blog */ = {
 			isa = PBXGroup;
 			children = (
+				0CD472511AA2CA3700446ABC /* Helper */,
+				0CD472501AA2CA2D00446ABC /* Model */,
+				0CD4724F1AA2CA2500446ABC /* Controller */,
+				0CD4724E1AA2CA1900446ABC /* manager */,
 				0CD4722C1AA2C87800446ABC /* AppDelegate.h */,
 				0CD4722D1AA2C87800446ABC /* AppDelegate.m */,
 				0CD4722F1AA2C87800446ABC /* ViewController.h */,
@@ -119,6 +130,51 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0CD4724E1AA2CA1900446ABC /* manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
+		0CD4724F1AA2CA2500446ABC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0CD472501AA2CA2D00446ABC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0CD472511AA2CA3700446ABC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		241D161B6A575DC054A55C72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1F73DF83D31BED5CC165061 /* libPods-van-blog.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CC523E4518BE8AFAA839A80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD4084B16BEA2EED6BB7595E /* Pods-van-blog.debug.xcconfig */,
+				6F97DA9CF78EFCBCB7870002 /* Pods-van-blog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CD472481AA2C87900446ABC /* Build configuration list for PBXNativeTarget "van-blog" */;
 			buildPhases = (
+				D308F3FD55623FC12647ACF9 /* Check Pods Manifest.lock */,
 				0CD472211AA2C87800446ABC /* Sources */,
 				0CD472221AA2C87800446ABC /* Frameworks */,
 				0CD472231AA2C87800446ABC /* Resources */,
+				1D8D8DC2F2007A06F5F288B5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +271,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D8D8DC2F2007A06F5F288B5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-van-blog/Pods-van-blog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D308F3FD55623FC12647ACF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0CD472211AA2C87800446ABC /* Sources */ = {
@@ -341,6 +432,7 @@
 		};
 		0CD472491AA2C87900446ABC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD4084B16BEA2EED6BB7595E /* Pods-van-blog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "van-blog/Info.plist";
@@ -351,6 +443,7 @@
 		};
 		0CD4724A1AA2C87900446ABC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F97DA9CF78EFCBCB7870002 /* Pods-van-blog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "van-blog/Info.plist";
@@ -412,6 +505,7 @@
 				0CD4724A1AA2C87900446ABC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CD4724B1AA2C87900446ABC /* Build configuration list for PBXNativeTarget "van-blogTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +514,7 @@
 				0CD4724D1AA2C87900446ABC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
